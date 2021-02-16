@@ -1,0 +1,24 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  labels:
+    machineconfiguration.openshift.io/role: worker
+  name: 50-worker-sysconfig-sshd
+spec:
+  config:
+    ignition:
+      config: {}
+      security:
+        tls: {}
+      timeouts: {}
+      version: 3.1.0
+    networkd: {}
+    passwd: {}
+    storage:
+      files:
+      - contents:
+          source: data:text/plain;charset=utf-8;base64,IyBDb25maWd1cmF0aW9uIGZpbGUgZm9yIHRoZSBzc2hkIHNlcnZpY2UuCgojIFRoZSBzZXJ2ZXIga2V5cyBhcmUgYXV0b21hdGljYWxseSBnZW5lcmF0ZWQgaWYgdGhleSBhcmUgbWlzc2luZy4KIyBUbyBjaGFuZ2UgdGhlIGF1dG9tYXRpYyBjcmVhdGlvbiwgYWRqdXN0IHNzaGQuc2VydmljZSBvcHRpb25zIGZvcgojIGV4YW1wbGUgdXNpbmcgIHN5c3RlbWN0bCBlbmFibGUgc3NoZC1rZXlnZW5AZHNhLnNlcnZpY2UgIHRvIGFsbG93IGNyZWF0aW9uCiMgb2YgRFNBIGtleSBvciAgc3lzdGVtY3RsIG1hc2sgc3NoZC1rZXlnZW5AcnNhLnNlcnZpY2UgIHRvIGRpc2FibGUgUlNBIGtleQojIGNyZWF0aW9uLgoKIyBEbyBub3QgY2hhbmdlIHRoaXMgb3B0aW9uIHVubGVzcyB5b3UgaGF2ZSBoYXJkd2FyZSByYW5kb20KIyBnZW5lcmF0b3IgYW5kIHlvdSBSRUFMTFkga25vdyB3aGF0IHlvdSBhcmUgZG9pbmcKClNTSF9VU0VfU1RST05HX1JORz0wCiMgU1NIX1VTRV9TVFJPTkdfUk5HPTEKCiMgU3lzdGVtLXdpZGUgY3J5cHRvIHBvbGljeToKIyBUbyBvcHQtb3V0LCB1bmNvbW1lbnQgdGhlIGZvbGxvd2luZyBsaW5lCkNSWVBUT19QT0xJQ1k9Cg==
+        mode: 0640
+        overwrite: true
+        path: /etc/sysconfig/sshd
+  osImageURL: ""
