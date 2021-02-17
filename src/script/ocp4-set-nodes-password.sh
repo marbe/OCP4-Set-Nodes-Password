@@ -170,6 +170,11 @@ else
   ocp_nodes=$(oc get nodes -l $node_label -o jsonpath='{.items[*].metadata.name}')
 fi
 
+if [ -z "$ocp_nodes" ] ; then
+  echo "No OCP nodes present."
+  exit
+fi
+
 echo
 read -sp 'NEW core password: ' core_password
 
