@@ -49,7 +49,7 @@ Help()
    echo "options:"
    echo "-h                             Print this Help."
    echo "-V                             Print software version and exit."
-   echo "-v <major.minor>               OCP version 'major.minor', eg. 4.5 / 4.6"
+   echo "-v <major.minor>               OCP version 'major.minor', eg. 4.5 / 4.6 / 4.7"
    echo
 }
 
@@ -92,6 +92,7 @@ done
 case $OCPVER in
   4.5) IGN_VERS=2.2.0 ;;
   4.6) IGN_VERS=3.1.0 ;;
+  4.7) IGN_VERS=3.2.0 ;;
   *) echo "Wrong OCP version"
      Help
      exit ;;

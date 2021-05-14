@@ -8,7 +8,7 @@ For internal security standard a customer asks for a solution to:
 
 ## Target version
 
-Version 1.0.0 of this repo has been tested on **OpenShift 4.6.15 and 4.5.9**. Please consider that there is a [bug](https://bugzilla.redhat.com/show_bug.cgi?id=1885186) related to clearing OCP nodes `authorized_keys` file. This bug is also documented in this solution:
+Version 1.1.0 of this repo has been tested on **OpenShift 4.7.7, 4.6.15 and 4.5.9**. Please consider that there is a [bug](https://bugzilla.redhat.com/show_bug.cgi?id=1885186) related to clearing OCP nodes `authorized_keys` file. This bug is also documented in this solution:
 
  * [Removing SSH key machine configs does not prevent login with private key](https://access.redhat.com/solutions/5463711)
 
@@ -190,5 +190,5 @@ Syntax: ocp4-set-nodes-password.sh [-h|V] -v <major.minor>
 options:
 -h                             Print this Help.
 -V                             Print software version and exit.
--v <major.minor>               OCP version 'major.minor', eg. 4.5 / 4.6
+-v <major.minor>               OCP version 'major.minor', eg. 4.5 / 4.6 / 4.7
 ```
